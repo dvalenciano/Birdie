@@ -33,10 +33,10 @@ You can find how I thought through and planned for this project using this Trell
 Below are snippets of the early workings that indicate the beginning level of building a can online application using a fullstack method
 
 Entity Relationship Diagram
-![Entity Relationship Diagram](BirdieERD.png)
+![Entity Relationship Diagram](images/BirdieERD.png)
 
 Component Hiearchy Diagram
-![Component Hiearchy Diagram](BirdieCHD.png)
+![Component Hiearchy Diagram](images/BirdieCHD.png)
 
 **_Future Updates_**
 
