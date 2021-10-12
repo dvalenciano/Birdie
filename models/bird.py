@@ -16,6 +16,8 @@ class Bird(db.Model):
 
     user = db.relationship("User", cascade='all',
                            backref=db.backref('users', lazy=True))
+    comment = db.relationship("Comment", cascade='all',
+                              backref=db.backref('comments', lazy=True))
 
     def __init__(self, bird_type, color, user_id):
         self.bird_type = bird_type
