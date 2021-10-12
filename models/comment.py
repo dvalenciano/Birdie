@@ -11,7 +11,7 @@ class Comment(db.Model):
         datetime.utcnow()), nullable=False)
     updated_at = db.Column(db.DateTime, default=datetime.utcnow(
     ), nullable=False, onupdate=datetime.now())
-    bird_id = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=False)
+    bird_id = db.Column(db.Integer, db.ForeignKey('birds.id'), nullable=False)
 
     bird = db.relationship("Bird", cascade='all',
                            backref=db.backref('birds', lazy=True))
