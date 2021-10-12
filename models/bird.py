@@ -14,8 +14,8 @@ class Bird(db.Model):
     ), nullable=False, onupdate=datetime.now())
     user_id = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=False)
 
-    tasks = db.relationship("Bird", cascade='all',
-                            backref=db.backref('birds', lazy=True))
+    user = db.relationship("User", cascade='all',
+                           backref=db.backref('users', lazy=True))
 
     def __init__(self, bird_type, color, user_id):
         self.bird_type = bird_type
