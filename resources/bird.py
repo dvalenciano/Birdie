@@ -30,8 +30,8 @@ class BirdDetail(Resource):
     def put(self, bird_id):
         data = request.get_json()
         bird = Bird.find_by_id(bird_id)
-        for k in data.keys():
-            bird[k] = data[k]
+        for d in data.keys():
+            setattr(bird, d, data[d])
         db.session.commit()
         return bird.json()
 

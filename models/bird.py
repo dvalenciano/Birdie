@@ -34,7 +34,8 @@ class Bird(db.Model):
 
     @classmethod
     def find_all(cls):
-        return Bird.query.all()
+        birds = Bird.query.all()
+        return [b.json() for b in birds]
 
     @classmethod
     def find_by_id(cls, bird_id):

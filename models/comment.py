@@ -14,7 +14,7 @@ class Comment(db.Model):
     bird_id = db.Column(db.Integer, db.ForeignKey('birds.id'), nullable=False)
 
     bird = db.relationship("Bird", cascade='all',
-                           backref=db.backref('birds', lazy=True))
+                           backref=db.backref('birds_comment', lazy=True))
 
     def __init__(self, comment, bird_id):
         self.comment = comment
@@ -30,7 +30,8 @@ class Comment(db.Model):
 
     @classmethod
     def find_all(cls):
-        return Comment.query.all()
+        comments = Comment.query.all()
+        return [c.json() for c in comments]
 
     @classmethod
     def find_by_id(cls, comment_id):
