@@ -4,7 +4,7 @@
       <div class="nav-bar">
         <b-nav class="logo-text">
           <div class="grid-container">
-            <img class="gear-logo" src="../assets/gear5.gif">
+            <!-- <img class="gear-logo" src="../assets/gear5.gif"> -->
             <h2 class="gear-h2">GEAR GRINDR</h2>
             <h3 class="gear-h3">What grinds your gears?</h3>
         
@@ -26,7 +26,7 @@
       </div>
       
     </div>
-    <h2>Posts</h2>
+    <h2>Birds</h2>
     <Modal />
     <section v-if="searched === false">
       <BirdCard v-for="post in posts" :post="post" :key="post.id" />
@@ -47,7 +47,7 @@ import Modal from './Modal.vue'
 export default {
   name: 'Home',
   components: {
-    PostCard,
+    BirdCard,
     Modal
   },
   data: () => ({

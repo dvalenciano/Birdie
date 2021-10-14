@@ -1,19 +1,19 @@
 <template>
   <div>
     <div>
-      <b-button v-b-modal.modal-prevent-closing class="post-button">Create A Post</b-button>
+      <b-button v-b-modal.modal-prevent-closing class="post-button">Log a Bird</b-button>
 
       <b-modal
       id="modal-prevent-closing"
       ref="modal"
-      title="Submit Your Post"
+      title="Log Your Bird"
       hide-footer
       >
       <b-form ref="form" @submit="newPost">
         <b-form-group
-          label="username"
+          label="Bird"
           label-for="username-input"
-          invalid-feedback="Username is required"
+          invalid-feedback="Bird Info is required"
           
         >
           <b-form-input
@@ -24,7 +24,7 @@
           ></b-form-input>
         </b-form-group>
 
-        <b-form-group label="post" label-for="post-input" invalid-feedback="Content is required" >
+        <b-form-group label="color" label-for="post-input" invalid-feedback="Content is required" >
           <b-form-input id="post-input" v-model="post" ></b-form-input>
         </b-form-group>
 
