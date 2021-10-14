@@ -29,10 +29,10 @@
     <h2>Posts</h2>
     <Modal />
     <section v-if="searched === false">
-      <PostCard v-for="post in posts" :post="post" :key="post.id" />
+      <BirdCard v-for="post in posts" :post="post" :key="post.id" />
     </section>
     <section v-else>
-      <PostCard v-for="post in searchResults" :post="post" :username="username" :key="post.id" />
+      <BirdCard v-for="post in searchResults" :post="post" :username="username" :key="post.id" />
     </section>
   </div>
 </template>
@@ -40,7 +40,7 @@
 
 <script>
 import axios from 'axios'
-import PostCard from './PostCard.vue'
+import BirdCard from './BirdCard.vue'
 import { BASE_URL } from '../globals'
 import Modal from './Modal.vue'
 // import { b-nav } from 'bootstrap-vue'
