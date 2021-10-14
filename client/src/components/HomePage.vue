@@ -5,8 +5,8 @@
         <b-nav class="logo-text">
           <div class="grid-container">
             <!-- <img class="gear-logo" src="../assets/gear5.gif"> -->
-            <h2 class="gear-h2">Birdie</h2>
-            <h3 class="gear-h3">Who have you seen?</h3>
+            <h2 class="nav-h2">Birdie</h2>
+            <h3 class="nav-h3">Who have you seen?</h3>
         
           </div>
         
