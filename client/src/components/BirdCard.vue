@@ -1,8 +1,8 @@
 <template>
   <div>
     <b-card bg-variant="light" :header="post.username" class="text-center">
-        <b-card-text>{{post.post}}</b-card-text>
-        <DeletePop :postId="post.id" :key="post.id"/>
+        <b-card-text>{{bird.bird}}</b-card-text>
+        <DeletePop :birdId="bird.id" :key="bird.id"/>
     </b-card>
   </div>
 </template>
@@ -11,8 +11,8 @@
 import DeletePop from './DeletePop.vue'
 export default {
   components: {DeletePop},
-  name: 'PostCard',
-  props: ['post'],
+  name: 'BirdCard',
+  props: ['bird'],
   methods: {
   }
 }

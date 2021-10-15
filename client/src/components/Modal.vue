@@ -11,24 +11,24 @@
       >
       <b-form ref="form" @submit="newPost">
         <b-form-group
-          label="Bird"
-          label-for="username-input"
+          label="Bird Name"
+          label-for="bird-input"
           invalid-feedback="Bird Info is required"
           
         >
           <b-form-input
             id="username-input" 
             
-            v-model="username"
+            v-model="bird"
             required
           ></b-form-input>
         </b-form-group>
 
-        <b-form-group label="color" label-for="post-input" invalid-feedback="Content is required" >
-          <b-form-input id="post-input" v-model="post" ></b-form-input>
+        <b-form-group label="Bird Color" label-for="color-input" invalid-feedback="Content is required" >
+          <b-form-input id="color-input" v-model="color" ></b-form-input>
         </b-form-group>
 
-      <b-button class="mt-3" block @click="newPost">Submit</b-button>
+      <b-button class="mt-3" block @click="newBird">Submit</b-button>
       </b-form>
     </b-modal>
     </div>
@@ -42,8 +42,8 @@ import {BASE_URL} from '../globals'
 export default {
   name: 'Modal',
   data: () =>({
-    username: '',
-    post: ''
+    bird: '',
+    color: ''
   }),
   components: {
     BModal,
@@ -53,14 +53,14 @@ export default {
     BFormGroup
   },
   methods: {
-      async newPost(){
+      async newBird(){
         const res = await axios.post(`${BASE_URL}/post`, 
         {
-          username: this.username,
-          post: this.post
+          bird: this.bird,
+          color: this.color
         })
-        this.username = ''
-        this.post = ''
+        this.bird = ''
+        this.color = ''
         location.reload()
         return res
       }

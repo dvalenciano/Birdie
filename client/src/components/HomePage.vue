@@ -6,7 +6,7 @@
           <div class="grid-container">
             <!-- <img class="gear-logo" src="../assets/gear5.gif"> -->
             <h3 class="nav-h2">Birdie</h3>
-            <h4 class="nav-h3">What bird did you seen?</h4>
+            <!-- <h4 class="nav-h3">What bird did you see?</h4> -->
         
           </div>
         
