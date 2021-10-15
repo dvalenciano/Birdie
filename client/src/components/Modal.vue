@@ -9,7 +9,7 @@
       title="Log Your Bird"
       hide-footer
       >
-      <b-form ref="form" @submit="newPost">
+      <b-form ref="form" @submit="newBird">
         <b-form-group
           label="Bird Name"
           label-for="bird-input"
@@ -17,7 +17,7 @@
           
         >
           <b-form-input
-            id="username-input" 
+            id="bird-input" 
             
             v-model="bird"
             required
@@ -36,7 +36,6 @@
 </template>
 
 <script>
-import {BModal, BButton, BFormInput, BForm, BFormGroup} from 'bootstrap-vue'
 import axios from 'axios'
 import {BASE_URL} from '../globals'
 export default {
@@ -45,13 +44,7 @@ export default {
     bird: '',
     color: ''
   }),
-  components: {
-    BModal,
-    BButton,
-    BFormInput,
-    BForm,
-    BFormGroup
-  },
+  
   methods: {
       async newBird(){
         const res = await axios.post(`${BASE_URL}/birds`, 
