@@ -45,23 +45,23 @@ export default {
     Modal
   },
   data: () => ({
-    posts: [],
+    birds: [],
     searchQuery: '',
     searchResults: [],
     searched: false
   }),
   mounted: function() {
-    this.getPosts()
+    this.getBirds()
   },
   methods: {
-    async getPosts() {
-      const res = await axios.get(`${BASE_URL}/post`)
-      this.posts = res.data
+    async getBirds() {
+      const res = await axios.get(`${BASE_URL}/birds`)
+      this.birds = res.data
     },
    
     getSearchResults(){
-      let posts = this.posts
-      let result = posts.filter(post => post.post.includes(this.searchQuery))
+      let birds = this.birds
+      let result = birds.filter(bird => bird.bird.includes(this.searchQuery))
       console.log(result)
       this.searchResults = result
       this.searched = true
