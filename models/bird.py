@@ -6,8 +6,8 @@ class Bird(db.Model):
     __tablename__ = 'birds'
 
     id = db.Column(db.Integer, primary_key=True)
-    bird_type = db.Column(db.String(255), nullable=False, unique=True)
-    color = db.Column(db.String(255), nullable=False, unique=True)
+    bird_type = db.Column(db.String(255), nullable=False, unique=False)
+    color = db.Column(db.String(255), nullable=False, unique=False)
     created_at = db.Column(db.DateTime, default=str(
         datetime.utcnow()), nullable=False)
     updated_at = db.Column(db.DateTime, default=datetime.utcnow(
