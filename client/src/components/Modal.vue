@@ -55,7 +55,6 @@ export default {
         this.bird = ''
         this.color = ''
         location.reload()
-        console.log(res)
         return res
       }
   }

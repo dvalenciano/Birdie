@@ -25,6 +25,7 @@ import {BASE_URL} from '../globals'
         console.log(this.birdId)
       axios.delete(`${BASE_URL}/birds/${this.birdId}`)
       this.$bvModal.hide(this.birdId)
+      location.reload()
     }
     }
   }
