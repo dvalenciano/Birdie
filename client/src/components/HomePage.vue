@@ -4,9 +4,7 @@
       <div class="nav-bar">
         <b-nav class="logo-text">
           <div class="grid-container">
-            <!-- <img class="gear-logo" src="../assets/gear5.gif"> -->
             <h3 class="nav-h2">Birdie</h3>
-            <!-- <h4 class="nav-h3">What bird did you see?</h4> -->
         
           </div>
         
@@ -25,10 +23,10 @@
     <h2>Birds</h2>
     <Modal />
     <section v-if="searched === false">
-      <BirdCard v-for="post in posts" :post="post" :key="post.id" />
+      <BirdCard v-for="bird in birds" :color="color" :key="bird.id" />
     </section>
     <section v-else>
-      <BirdCard v-for="post in searchResults" :post="post" :username="username" :key="post.id" />
+      <BirdCard v-for="bird in searchResults" :color="color" :bird="bird" :key="bird.id" />
     </section>
   </div>
 </template>

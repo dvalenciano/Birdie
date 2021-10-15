@@ -54,7 +54,7 @@ export default {
   },
   methods: {
       async newBird(){
-        const res = await axios.post(`${BASE_URL}/post`, 
+        const res = await axios.post(`${BASE_URL}/birds`, 
         {
           bird: this.bird,
           color: this.color
