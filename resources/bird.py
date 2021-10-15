@@ -36,7 +36,7 @@ class BirdDetail(Resource):
         return bird.json()
 
     def delete(self, bird_id):
-        bird = Bird.find_by_id()
+        bird = Bird.find_by_id(bird_id)
         if not bird:
             return {"msg": "Not found"}, 404
         db.session.delete(bird)

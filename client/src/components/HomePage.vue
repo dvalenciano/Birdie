@@ -23,7 +23,7 @@
     <h2>Birds</h2>
     <Modal />
     <section v-if="searched === false">
-      <BirdCard v-for="bird in birds" :color="color" :key="bird.id" />
+      <BirdCard v-for="bird in birds" :bird="bird" :key="bird.id" />
     </section>
     <section v-else>
       <BirdCard v-for="bird in searchResults" :color="color" :bird="bird" :key="bird.id" />

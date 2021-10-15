@@ -1,6 +1,6 @@
 <template>
   <div>
-    <b-card bg-variant="light" :header="post.username" class="text-center">
+    <b-card bg-variant="light" :header="bird.bird_type" class="text-center">
         <b-card-text>{{bird.bird}}</b-card-text>
         <DeletePop :birdId="bird.id" :key="bird.id"/>
     </b-card>
