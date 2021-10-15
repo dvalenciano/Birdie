@@ -49,12 +49,13 @@ export default {
       async newBird(){
         const res = await axios.post(`${BASE_URL}/birds`, 
         {
-          bird: this.bird,
+          bird_type: this.bird,
           color: this.color
         })
         this.bird = ''
         this.color = ''
         location.reload()
+        console.log(res)
         return res
       }
   }

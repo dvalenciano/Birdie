@@ -13,6 +13,7 @@ class Birds(Resource):
 
     def post(self):
         data = request.get_json()
+        print(data)
         params = {}
         for k in data.keys():
             params[k] = data[k]
@@ -23,9 +24,8 @@ class Birds(Resource):
 
 class BirdDetail(Resource):
     def get(self, bird_id):
-        bird = Bird.query.options(joinedload(
-            'bird')).filter_by(id=bird_id).first()
-        return{**bird.json(), "user": bird.user.json()}
+        bird = Bird.find_by_id(bird_id)
+        return{**bird.json()}
 
     def put(self, bird_id):
         data = request.get_json()

@@ -19,13 +19,12 @@ class Bird(db.Model):
     comment = db.relationship("Comment", cascade='all',
                               backref=db.backref('comments', lazy=True))
 
-    def __init__(self, bird_type, color, user_id):
+    def __init__(self, bird_type, color):
         self.bird_type = bird_type
         self.color = color
-        self.user_id = user_id
 
     def json(self):
-        return {"id": self.id, "bird_type": self.bird_type, "color": self.color, "user_id": self.user_id, "created_at": str(self.created_at), "updated_at": str(self.updated_at)}
+        return {"id": self.id, "bird_type": self.bird_type, "color": self.color, "created_at": str(self.created_at), "updated_at": str(self.updated_at)}
 
     def create(self):
         db.session.add(self)
