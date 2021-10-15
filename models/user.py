@@ -14,8 +14,8 @@ class User(db.Model):
     updated_at = db.Column(db.DateTime, default=datetime.utcnow(
     ), nullable=False, onupdate=datetime.now())
 
-    tasks = db.relationship("Bird", cascade='all',
-                            backref=db.backref('birds', lazy=True))
+    # tasks = db.relationship("Bird", cascade='all',
+    #                         backref=db.backref('birds', lazy=True))
 
     def __init__(self, password, username, email):
         self.password = password
