@@ -3,7 +3,7 @@
     <b-card bg-variant="light" :header="comment.comment" class="text-center">
         <b-card-text>{{comment.comment}}</b-card-text>
         <div>
-          <!-- <DeletePop :commentId="comment.id" /> -->
+          <CommentDelete :commentId="comment.id" />
         </div>
         <div>
           <CommentModal :commentId="comment.id" />
