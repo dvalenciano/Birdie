@@ -1,32 +1,9 @@
 <template>
   <div>
-    <div>
-      <div class="nav-bar">
-        <!-- <b-nav class="logo-text">
-          <div class="grid-container">
-            <h3 class="nav-h2">Birdie</h3>
-        
-          </div>
-        
-        </b-nav> -->
-        <form v-on:submit="getSearchResults" @submit.prevent>
-          <b-input-group class="mt-1">
-            <template #append >
-              <b-button type="submit">Search</b-button>
-            </template>
-            <b-form-input type="search" sm="3" v-model="searchQuery" :value='searchQuery'></b-form-input>
-          </b-input-group>
-        </form>
-      </div>
-      
-    </div>
-    <h2>Birds</h2>
+    <h2>Bird Comments</h2>
     <Modal />
-    <section v-if="searched === false">
+    <section>
       <BirdCard v-for="bird in birds" :bird="bird" :key="bird.id" />
-    </section>
-    <section v-else>
-      <BirdCard v-for="bird in searchResults" :color="color" :bird="bird" :key="bird.id" />
     </section>
   </div>
 </template>
