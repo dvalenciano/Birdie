@@ -46,7 +46,7 @@ export default {
   }),
   
   methods: {
-      async newBird(){
+      async newcomment(){
         const res = await axios.post(`${BASE_URL}/birds`, 
         {
           bird_type: this.bird,

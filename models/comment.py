@@ -7,21 +7,18 @@ class Comment(db.Model):
 
     id = db.Column(db.Integer, primary_key=True)
     comment = db.Column(db.String(255), nullable=False, unique=True)
+    bird_type = db.Column(db.String(255), nullable=False, unique=False)
     created_at = db.Column(db.DateTime, default=str(
         datetime.utcnow()), nullable=False)
     updated_at = db.Column(db.DateTime, default=datetime.utcnow(
     ), nullable=False, onupdate=datetime.now())
-    bird_id = db.Column(db.Integer, db.ForeignKey('birds.id'), nullable=False)
 
-    bird = db.relationship("Bird", cascade='all',
-                           backref=db.backref('birds_comment', lazy=True))
-
-    def __init__(self, comment, bird_id):
+    def __init__(self, comment, bird_type):
         self.comment = comment
-        self.bird_id = bird_id
+        self.bird_type = bird_type
 
     def json(self):
-        return {"id": self.id, "comment": self.comment, "bird_id": self.bird_id, "created_at": str(self.created_at), "updated_at": str(self.updated_at)}
+        return {"id": self.id, "comment": self.comment, "bird_type": self.bird_type, "created_at": str(self.created_at), "updated_at": str(self.updated_at)}
 
     def create(self):
         db.session.add(self)
