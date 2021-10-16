@@ -1,7 +1,7 @@
 <template>
   <div>
     <b-card bg-variant="light" :header="bird.bird_type" class="text-center">
-        <b-card-text>{{bird.bird}}</b-card-text>
+        <b-card-text>{{bird.color}}</b-card-text>
         <div>
           <DeletePop :birdId="bird.id" />
         </div>

@@ -41,7 +41,7 @@ import {BASE_URL} from '../globals'
 export default {
   name: 'Modal',
   data: () =>({
-    bird: '',
+    bird_type: '',
     color: ''
   }),
   
