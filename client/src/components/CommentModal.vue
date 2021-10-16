@@ -1,15 +1,15 @@
 <template>
   <div>
     <div>
-      <b-button v-b-modal.modal-prevent-closing class="post-button">Log a Bird</b-button>
+      <b-button v-b-modal.modal-prevent-closing class="post-button">Comment on a bird</b-button>
 
       <b-modal
       id="modal-prevent-closing"
       ref="modal"
-      title="Log Your Bird"
+      title="Log Your comment"
       hide-footer
       >
-      <b-form ref="form" @submit="newBird">
+      <b-form ref="form" @submit="newComment">
         <b-form-group
           label="Bird Name"
           label-for="bird-input"
@@ -24,11 +24,11 @@
           ></b-form-input>
         </b-form-group>
 
-        <b-form-group label="Bird Color" label-for="color-input" invalid-feedback="Content is required" >
-          <b-form-input id="color-input" v-model="color" ></b-form-input>
+        <b-form-group label="Comments" label-for="comment-input" invalid-feedback="Content is required" >
+          <b-form-input id="comment-input" v-model="comment" ></b-form-input>
         </b-form-group>
 
-      <b-button class="mt-3" block @click="newBird">Submit</b-button>
+      <b-button class="mt-3" block @click="newComment">Add Comment</b-button>
       </b-form>
     </b-modal>
     </div>
@@ -42,18 +42,18 @@ export default {
   name: 'Modal',
   data: () =>({
     bird_type: '',
-    color: ''
+    comment: ''
   }),
   
   methods: {
-      async newcomment(){
-        const res = await axios.post(`${BASE_URL}/birds`, 
+      async newComment(){
+        const res = await axios.post(`${BASE_URL}/comments`, 
         {
           bird_type: this.bird,
-          color: this.color
+          comment: this.comment
         })
         this.bird = ''
-        this.color = ''
+        this.comment = ''
         location.reload()
         return res
       }
