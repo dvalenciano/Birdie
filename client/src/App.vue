@@ -1,6 +1,11 @@
 <template>
   <div id="app">
-    <HomePage />
+    <header>
+      <Nav/>
+    </header>
+    <main>
+      <router-view ></router-view>
+    </main>
   </div>
 </template>
 
