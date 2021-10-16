@@ -11,12 +11,12 @@
 
 <script>
 // imports go here
-import HomePage from './pages/HomePage.vue'
+import Nav from './components/Nav.vue'
 
 export default {
   name: 'App',
   components: {
-    HomePage
+    Nav
   }
 }
 </script>
