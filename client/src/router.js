@@ -1,5 +1,6 @@
 import VueRouter from 'vue-router'
 import HomePage from './pages/HomePage'
+import CommentPage from './pages/CommentPage'
 // import About from './pages/About'
 
 const routes = [

@@ -5,18 +5,14 @@
         <div>
           <CommentDelete :commentId="comment.id" />
         </div>
-        <div>
-          <CommentModal :commentId="comment.id" />
-        </div>
     </b-card>
   </div>
 </template>
 
 <script>
 import CommentDelete from './CommentDelete.vue'
-import CommentModal from './CommentModal.vue'
 export default {
-  components: { CommentModal, CommentDelete},
+  components: { CommentDelete},
   name: 'CommentCard',
   props: ['comment'],
   methods: {

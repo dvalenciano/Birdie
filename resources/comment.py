@@ -1,9 +1,7 @@
 from models.db import db
 from models.comment import Comment
-from models.user import User
 from flask_restful import Resource
 from flask import request
-from sqlalchemy.orm import joinedload
 
 
 class Comments(Resource):
@@ -23,9 +21,8 @@ class Comments(Resource):
 
 class CommentDetail(Resource):
     def get(self, comment_id):
-        comment = Comment.query.options(joinedload(
-            'bird')).filter_by(id=comment_id).first()
-        return{**comment.json(), "bird": comment.user.json()}
+        comment = Comment.find_by_id(comment_id)
+        return{**comment.json()}
 
     def delete(self, comment_id):
         comment = Comment.find_by_id()

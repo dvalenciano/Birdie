@@ -24,7 +24,7 @@
           ></b-form-input>
         </b-form-group>
 
-        <b-form-group label="Comments" label-for="comment-input" invalid-feedback="Content is required" >
+        <b-form-group label="Comment" label-for="comment-input" invalid-feedback="Content is required" >
           <b-form-input id="comment-input" v-model="comment" ></b-form-input>
         </b-form-group>
 
@@ -39,7 +39,7 @@
 import axios from 'axios'
 import {BASE_URL} from '../globals'
 export default {
-  name: 'Modal',
+  name: 'CommentModal',
   data: () =>({
     bird_type: '',
     comment: ''

@@ -12,12 +12,6 @@ class Bird(db.Model):
         datetime.utcnow()), nullable=False)
     updated_at = db.Column(db.DateTime, default=datetime.utcnow(
     ), nullable=False, onupdate=datetime.now())
-    # user_id = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=True)
-
-    # user = db.relationship("User", cascade='all',
-    #                        backref=db.backref('users', lazy=True))
-    comment = db.relationship("Comment", cascade='all',
-                              backref=db.backref('comments', lazy=True))
 
     def __init__(self, bird_type, color):
         self.bird_type = bird_type

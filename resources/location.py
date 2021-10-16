@@ -2,7 +2,6 @@ from models.db import db
 from models.location import Location
 from flask_restful import Resource
 from flask import request
-from sqlalchemy.orm import joinedload
 
 
 class Locations(Resource):
@@ -22,9 +21,8 @@ class Locations(Resource):
 
 class LocationDetail(Resource):
     def get(self, location_id):
-        location = Location.query.options(joinedload(
-            'bird')).filter_by(id=location_id).first()
-        return{**location.json(), "bird": location.user.json()}
+        location = Location.find_by_all(location_id)
+        return{**location.json()}
 
     def delete(self, location_id):
         location = Location.find_by_id()

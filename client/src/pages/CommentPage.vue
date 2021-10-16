@@ -37,7 +37,7 @@ export default {
    
     getSearchResults(){
       let comments = this.comments
-      let result = comment.filter(comment => comment.comment.includes(this.searchQuery))
+      let result = comments.filter(comment => comment.comment.includes(this.searchQuery))
       console.log(result)
       this.searchResults = result
       this.searched = true
