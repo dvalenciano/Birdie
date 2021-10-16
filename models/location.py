@@ -18,7 +18,7 @@ class Location(db.Model):
         self.note = note
 
     def json(self):
-        return {"id": self.id, "comment": self.comment, "bird_id": self.bird_id, "created_at": str(self.created_at), "updated_at": str(self.updated_at)}
+        return {"id": self.id, "location": self.location, "note": self.note, "created_at": str(self.created_at), "updated_at": str(self.updated_at)}
 
     def create(self):
         db.session.add(self)
@@ -27,10 +27,10 @@ class Location(db.Model):
 
     @classmethod
     def find_all(cls):
-        comments = Comment.query.all()
-        return [c.json() for c in comments]
+        locations = Location.query.all()
+        return [c.json() for c in locations]
 
     @classmethod
-    def find_by_id(cls, comment_id):
-        comment = Comment.query.filter_by(id=comment_id).first()
-        return comment
+    def find_by_id(cls, location_id):
+        location = Location.query.filter_by(id=location_id).first()
+        return location
