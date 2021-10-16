@@ -1,6 +1,15 @@
 <template>
   <nav>
+    <div class="nav-bar">
+    <b-nav class="logo-text">
+          <div class="grid-container">
+            <h3 class="nav-h2">Birdie</h3>
+        
+          </div>
+        
+        </b-nav>
     <router-link to="/">Home</router-link>
+    </div>
   </nav>
 </template>
 
