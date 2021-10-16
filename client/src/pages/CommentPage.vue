@@ -1,9 +1,9 @@
 <template>
   <div>
     <h2>Bird Comments</h2>
-    <Modal />
+    <CommentModal />
     <section>
-      <BirdCard v-for="bird in birds" :bird="bird" :key="bird.id" />
+      <CommentCard v-for="comment in comments" :comment="comment" :key="comment.id" />
     </section>
   </div>
 </template>
@@ -11,34 +11,33 @@
 
 <script>
 import axios from 'axios'
-import BirdCard from '../components/BirdCard.vue'
+import CommentCard from '../components/CommentCard.vue'
 import { BASE_URL } from '../globals'
-import Modal from '../components/Modal.vue'
-// import { b-nav } from 'bootstrap-vue'
+import CommentModal from '../components/CommentModal.vue'
 export default {
   name: 'Home',
   components: {
-    BirdCard,
-    Modal
+    CommentCard,
+    CommentModal
   },
   data: () => ({
-    birds: [],
+    comments: [],
     searchQuery: '',
     searchResults: [],
     searched: false
   }),
   mounted: function() {
-    this.getBirds()
+    this.getComments()
   },
   methods: {
-    async getBirds() {
-      const res = await axios.get(`${BASE_URL}/birds`)
-      this.birds = res.data
+    async getComments() {
+      const res = await axios.get(`${BASE_URL}/comments`)
+      this.comments = res.data
     },
    
     getSearchResults(){
-      let birds = this.birds
-      let result = birds.filter(bird => bird.bird.includes(this.searchQuery))
+      let comments = this.comments
+      let result = comment.filter(comment => comment.comment.includes(this.searchQuery))
       console.log(result)
       this.searchResults = result
       this.searched = true

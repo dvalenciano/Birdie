@@ -13,10 +13,10 @@
 </template>
 
 <script>
-// import DeletePop from './DeletePop.vue'
+import CommentDelete from './CommentDelete.vue'
 import CommentModal from './CommentModal.vue'
 export default {
-  components: { CommentModal},
+  components: { CommentModal, CommentDelete},
   name: 'CommentCard',
   props: ['comment'],
   methods: {
