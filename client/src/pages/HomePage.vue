@@ -2,13 +2,13 @@
   <div>
     <div>
       <div class="nav-bar">
-        <b-nav class="logo-text">
+        <!-- <b-nav class="logo-text">
           <div class="grid-container">
             <h3 class="nav-h2">Birdie</h3>
         
           </div>
         
-        </b-nav>
+        </b-nav> -->
         <form v-on:submit="getSearchResults" @submit.prevent>
           <b-input-group class="mt-1">
             <template #append >
@@ -34,9 +34,9 @@
 
 <script>
 import axios from 'axios'
-import BirdCard from './BirdCard.vue'
+import BirdCard from '../components/BirdCard.vue'
 import { BASE_URL } from '../globals'
-import Modal from './Modal.vue'
+import Modal from '../components/Modal.vue'
 // import { b-nav } from 'bootstrap-vue'
 export default {
   name: 'Home',
