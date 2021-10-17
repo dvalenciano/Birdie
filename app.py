@@ -24,7 +24,7 @@ api.add_resource(bird.Birds, '/birds')
 api.add_resource(bird.BirdDetail, '/birds/<int:bird_id>')
 api.add_resource(comment.Comments, '/comments')
 api.add_resource(comment.CommentDetail, '/comments/<int:comment_id>')
-api.add_resource(location.locations, '/locations')
+api.add_resource(location.Locations, '/locations')
 api.add_resource(location.LocationDetail, '/locations/<int:location_id>')
 
 if __name__ == '__main__':
