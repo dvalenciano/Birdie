@@ -4,6 +4,15 @@
   outline: lightgray solid 5px;
 }
 
+.nav-right {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 40vw;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
 .grid-container {
   display: grid;
   grid-template-columns: 1fr, 1fr;
@@ -44,6 +53,14 @@ h2 {
 }
 
 .post-button {
+  color: black;
+  background-color: lightskyblue;
+  margin-bottom: 25px;
+}
+
+.delete-button {
+  color: black;
+  background-color: lightskyblue;
   margin-bottom: 25px;
 }
 

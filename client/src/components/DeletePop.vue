@@ -1,6 +1,6 @@
 <template>
   <div>
-  <b-button id="show-btn" @click="$bvModal.show(birdId)">Delete Bird</b-button>
+  <b-button class="delete-button" id="show-btn" @click="$bvModal.show(birdId)">Delete Bird</b-button>
 
   <b-modal :id="birdId" hide-footer>
     <template #modal-title>
