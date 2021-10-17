@@ -2,11 +2,13 @@
   <div>
     <b-card bg-variant="light" :header="bird.bird_type" class="text-center">
         <b-card-text>{{bird.color}}</b-card-text>
+        <div class="card-buttons">
         <div>
           <DeletePop :birdId="bird.id" />
         </div>
         <div>
           <UpdateModal :birdId="bird.id" />
+        </div>
         </div>
     </b-card>
   </div>

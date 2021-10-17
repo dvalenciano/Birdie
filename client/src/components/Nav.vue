@@ -4,15 +4,21 @@
     <b-nav class="logo-text">
           <div class="grid-container">
             <img class="birdie-logo" src="../assets/parrotlogo.png">
-            <h3 class="nav-h2">Birdie</h3>
+            <h2 class="nav-h2">Birdie</h2>
         
           </div>
         
         </b-nav>
         <div class="nav-right">
-    <router-link to="/">Home</router-link>
-    <router-link to="/comments">Comments</router-link>
-    <router-link to="/locations">Locations</router-link>
+          <div>
+    <router-link style="text-decoration: none; color: inherit;" to="/birds">Birds |  </router-link>
+          </div>
+          <div>
+    <router-link style="text-decoration: none; color: inherit;" to="/comments">  Comments |  </router-link>
+          </div>
+          <div>
+    <router-link style="text-decoration: none; color: inherit;" to="/locations">  Locations  </router-link>
+          </div>
         </div>
     </div>
   </nav>
