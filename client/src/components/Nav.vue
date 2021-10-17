@@ -3,6 +3,7 @@
     <div class="nav-bar">
     <b-nav class="logo-text">
           <div class="grid-container">
+            <img class="birdie-logo" src="../assets/parrotlogo.png">
             <h3 class="nav-h2">Birdie</h3>
         
           </div>

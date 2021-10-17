@@ -10,7 +10,7 @@
   grid-row: 1fr, 1fr;
 }
 
-/* .gear-logo {
+.birdie-logo {
   grid-column: 1 / span2;
   grid-row: 1 / span2;
   justify-self: center;
@@ -18,8 +18,11 @@
   margin-right: 15px;
   margin-left: 15px;
   margin-top: 5px;
-  height: 60px;
-} */
+  height: auto;
+  width: auto;
+  max-height: 85px;
+  max-width: 300px;
+}
 
 .nav-h2 {
   grid-column: 3 / span1;
