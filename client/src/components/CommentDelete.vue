@@ -9,7 +9,7 @@
     <div class="d-block text-center">
       <h3>Are you sure you want to delete this comment?</h3>
     </div>
-    <b-button class="mt-3" block @click="deleteComent">Delete Comment</b-button>
+    <b-button class="mt-3" block @click="deleteComment">Delete Comment</b-button>
     </b-modal>
 </div>
 </template>
