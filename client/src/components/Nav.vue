@@ -10,6 +10,7 @@
         </b-nav>
     <router-link to="/">Home</router-link>
     <router-link to="/comments">Comments</router-link>
+    <router-link to="/locations">Locations</router-link>
     </div>
   </nav>
 </template>
