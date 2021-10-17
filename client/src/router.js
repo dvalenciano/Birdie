@@ -5,7 +5,8 @@ import CommentPage from './pages/CommentPage'
 
 const routes = [
   { path: '/', component: HomePage, name: 'HomePage' },
-  { path: '/comments', component: CommentPage, name: 'CommentPage' }
+  { path: '/comments', component: CommentPage, name: 'CommentPage' },
+  { path: '/locations', component: LocationPage, name: 'LocationPage' }
 ]
 
 export default new VueRouter({ routes, mode: 'history' })
