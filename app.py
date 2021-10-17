@@ -3,8 +3,8 @@ from flask_restful import Api
 from flask_cors import CORS
 from flask_migrate import Migrate
 from models.db import db
-from models import user, bird, comment
-from resources import user, bird, comment
+from models import user, bird, comment, location
+from resources import user, bird, comment, location
 
 
 app = Flask(__name__)
@@ -24,6 +24,8 @@ api.add_resource(bird.Birds, '/birds')
 api.add_resource(bird.BirdDetail, '/birds/<int:bird_id>')
 api.add_resource(comment.Comments, '/comments')
 api.add_resource(comment.CommentDetail, '/comments/<int:comment_id>')
+api.add_resource(location.locations, '/locations')
+api.add_resource(location.LocationDetail, '/locations/<int:location_id>')
 
 if __name__ == '__main__':
     app.run(debug=True)

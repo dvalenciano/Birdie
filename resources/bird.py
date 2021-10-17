@@ -1,6 +1,5 @@
 from models.db import db
 from models.bird import Bird
-from models.user import User
 from flask_restful import Resource
 from flask import request
 from sqlalchemy.orm import joinedload
