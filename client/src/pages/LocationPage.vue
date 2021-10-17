@@ -1,7 +1,7 @@
 <template>
   <div>
-    <h2>Location Comments</h2>
-    <!-- <CommentModal /> -->
+    <h2>Location Notes</h2>
+    <LocationModal />
     <section>
       <!-- <CommentCard v-for="comment in comments" :comment="comment" :key="comment.id" /> -->
     </section>
@@ -11,6 +11,7 @@
 
 <script>
 import axios from 'axios'
+import LocationModal from '../components/LocationModal.vue'
 // import CommentCard from '../components/CommentCard.vue'
 import { BASE_URL } from '../globals'
 // import CommentModal from '../components/CommentModal.vue'
@@ -19,6 +20,7 @@ export default {
   components: {
     // CommentCard,
     // CommentModal
+    LocationModal
   },
   data: () => ({
     locations: [],
