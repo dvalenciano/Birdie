@@ -2,7 +2,7 @@
   <div>
   <b-button id="show-btn" @click="$bvModal.show(commentId)">Delete Comment</b-button>
 
-  <b-modal :id="birdId" hide-footer>
+  <b-modal :id="commentId" hide-footer>
     <template #modal-title>
      Delete?
     </template>

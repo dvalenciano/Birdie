@@ -3,7 +3,7 @@
     <h2>Location Notes</h2>
     <LocationModal />
     <section>
-      <!-- <CommentCard v-for="comment in comments" :comment="comment" :key="comment.id" /> -->
+      <LocationCard v-for="location in locations" :location="location" :key="location.id" />
     </section>
   </div>
 </template>
@@ -12,15 +12,13 @@
 <script>
 import axios from 'axios'
 import LocationModal from '../components/LocationModal.vue'
-// import CommentCard from '../components/CommentCard.vue'
+import LocationCard from '../components/LocationCard.vue'
 import { BASE_URL } from '../globals'
-// import CommentModal from '../components/CommentModal.vue'
 export default {
-  name: 'Home',
+  name: 'LocationPage',
   components: {
-    // CommentCard,
-    // CommentModal
-    LocationModal
+    LocationModal,
+    LocationCard
   },
   data: () => ({
     locations: [],

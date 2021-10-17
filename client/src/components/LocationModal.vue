@@ -9,7 +9,7 @@
       title="Log Your Notes"
       hide-footer
       >
-      <b-form ref="form" @submit="newComment">
+      <b-form ref="form" @submit="newLocation">
         <b-form-group
           label="Bird Name"
           label-for="bird-input"
@@ -25,14 +25,14 @@
         </b-form-group>
 
         <b-form-group label="Location" label-for="location-input" invalid-feedback="Content is required" >
-          <b-form-input id="location-input" v-model="comment" ></b-form-input>
+          <b-form-input id="location-input" v-model="location" ></b-form-input>
         </b-form-group>
 
         <b-form-group label="Notes" label-for="note-input" invalid-feedback="Content is required" >
-          <b-form-input id="note-input" v-model="comment" ></b-form-input>
+          <b-form-input id="note-input" v-model="note" ></b-form-input>
         </b-form-group>
 
-      <b-button class="mt-3" block @click="newComment">Add Notes</b-button>
+      <b-button class="mt-3" block @click="newLocation">Add Notes</b-button>
       </b-form>
     </b-modal>
     </div>

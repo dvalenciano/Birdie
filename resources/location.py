@@ -25,7 +25,7 @@ class LocationDetail(Resource):
         return{**location.json()}
 
     def delete(self, location_id):
-        location = Location.find_by_id()
+        location = Location.find_by_id(location_id)
         if not location:
             return {"msg": "Not found"}, 404
         db.session.delete(location)

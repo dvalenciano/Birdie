@@ -22,7 +22,6 @@ import {BASE_URL} from '../globals'
     props: ['locationId'],
    methods: {
       deleteLocation() {
-        console.log(this.locationId)
       axios.delete(`${BASE_URL}/locations/${this.locationId}`)
       this.$bvModal.hide(this.locationId)
       location.reload()

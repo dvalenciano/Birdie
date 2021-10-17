@@ -1,6 +1,6 @@
 <template>
   <div>
-    <b-card bg-variant="light" :header="comment.comment" class="text-center">
+    <b-card bg-variant="light" :header="comment.bird_type" class="text-center">
         <b-card-text>{{comment.comment}}</b-card-text>
         <div>
           <CommentDelete :commentId="comment.id" />
