@@ -32,15 +32,16 @@ You can find how I thought through and planned for this project using this Trell
 
 Below are snippets of the early workings that indicate the beginning level of building a can online application using a fullstack method
 
-Entity Relationship Diagram
-![Entity Relationship Diagram](images/BirdieERD.png)
+Home Page
+![Birdie Home Page](images/birdhome.png)
 
-Component Hiearchy Diagram
-![Component Hiearchy Diagram](images/BirdieCHD.png)
+Bird Input
+![Birdie Bird Tracking](images/input.png)
 
 **_Future Updates_**
 
-- [ ] API to import pictures of local birds
-- [ ] Update to include user added pictures
+- [ ] API to import pictures of birds
+- [ ] Update to include user authentication
+- [ ] Add messaging capabilities
 
 **_Credits_**
