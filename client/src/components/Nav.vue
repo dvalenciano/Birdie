@@ -9,15 +9,17 @@
           </div>
         
         </b-nav>
-        <div class="nav-right">
-          <div>
-    <router-link style="text-decoration: none; color: inherit;" to="/birds">Birds |  </router-link>
+        <div class="nav-right"><div>
+    <router-link style="text-decoration: none; font-size: 30px; color: inherit;" to="/">Welcome |  </router-link>
           </div>
           <div>
-    <router-link style="text-decoration: none; color: inherit;" to="/comments">  Comments |  </router-link>
+    <router-link style="text-decoration: none; font-size: 30px; color: inherit;" to="/birds">Birds |  </router-link>
           </div>
           <div>
-    <router-link style="text-decoration: none; color: inherit;" to="/locations">  Locations  </router-link>
+    <router-link style="text-decoration: none; font-size: 30px; color: inherit;" to="/comments">  Comments |  </router-link>
+          </div>
+          <div>
+    <router-link style="text-decoration: none; font-size: 30px; color: inherit;" to="/locations">  Locations  </router-link>
           </div>
         </div>
     </div>

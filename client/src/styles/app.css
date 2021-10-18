@@ -40,6 +40,12 @@
   max-width: 300px;
 }
 
+.bird-pic {
+  height: auto;
+  width: auto;
+  max-height: 350px;
+  max-width: 900px;
+}
 .nav-h2 {
   grid-column: 3 / span1;
   grid-row: 1 / span1;
@@ -54,6 +60,10 @@
   align-self: center;
   justify-self: center;
   font-size: 20px;
+}
+
+.home-open {
+  margin: 25px;
 }
 
 h2 {
